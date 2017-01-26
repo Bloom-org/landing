@@ -174,3 +174,23 @@ footer {
     height: 60px;
   }
 }
+
+.signup-form {
+  @media(min-width:600px) {
+   max-width: 390px;
+  }
+  input {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+  .btn {
+    width: 100%;
+    background:#000;
+  }
+
+  div.mce_inline_error {
+    font-weight:normal !important;
+  }
+
+}
