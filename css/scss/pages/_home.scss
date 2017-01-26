@@ -137,8 +137,10 @@ header {
   margin-top: 45px;
 
   span {
-    font-family: 'Kaushan Script', sans-serif;
-    font-size: 2em;
+    font: {
+      family: 'Kaushan Script', sans-serif;
+      size: 2em;
+    }
   }
 
   .separator {
@@ -149,18 +151,19 @@ header {
 
   p {
     margin: 1rem 0;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-
+    font: {
+      family: 'Quicksand', sans-serif;
+      size: 1rem;
+      weight: 400;
+    }
     span {
       font-size: 1.2rem;
     }
   }
 
-  p:last-of-type {
-    font-size: 0.8rem;
-  }
+  // p:last-of-type {
+  //   font-size: 0.8rem;
+  // }
 }
 
 footer {
@@ -176,21 +179,68 @@ footer {
 }
 
 .signup-form {
+  margin-top:2em;
+  width: 100%;
   @media(min-width:600px) {
-   max-width: 390px;
+   max-width: 250px;
   }
   input {
+    font-family: 'Quicksand', sans-serif;
     width: 100%;
+    font-size: 100%;
+    border: 0 none;
+    border-radius:0;
     text-align: center;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  input[type="text"] {
+    border: solid 2px #333;
   }
   .btn {
-    width: 100%;
-    background:#000;
+    background:#8E7E6b;
+    color: #000;
+    font-weight:bold;
+    cursor:pointer;
+    transition: all 0.3s ease;
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    &:hover,
+    &:focus {
+      background: #EDC06A;
+    }
+    &:focus {
+      outline: 0 none;
+    }
+  }
+
+  div#mce-responses {
+    font-family: 'Quicksand', sans-serif;
+    font-weight:normal !important;
+    margin-bottom:0.5em !important;
+  }
+
+  div#mce-success-response,
+  div#mce-error-response,
+  div.mce_inline_error {
+    font-weight:normal !important;
+  }
+
+  div#mce-success-response,
+  div#mce-error-response {
+    margin-bottom: 1em !important;
+  }
+
+  div#mce-error-response,
+  div.mce_inline_error {
+    color:#c62a6a !important;
   }
 
   div.mce_inline_error {
-    font-weight:normal !important;
+    font-size:80% !important;
+    background: none !important;
+    margin-top: -1em !important;
+    padding:0 !important;
   }
 
 }
