@@ -18,7 +18,6 @@
 // Import reusable modules
 @import "components/media";
 @import "components/buttons";
-@import "components/tables";
 @import "components/forms";
 @import "components/alerts";
 @import "components/nav";
@@ -30,7 +29,6 @@
 
 // Additional styles to think about
 @import "base/responsive";
-@import "base/print";
 
 // If IE support is needed
 @import "base/ie";
