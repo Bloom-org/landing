@@ -29,6 +29,9 @@
     "grunt-postcss": "^0.5.4",
     "grunt-sass": "^1.0.0"
   },
+  "engines": {
+    "node": "5.1.0"
+  },
   "scripts": {
     "postinstall": "grunt build",
     "start": "node server.js"
