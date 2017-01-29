@@ -1,9 +1,9 @@
 module.exports = function(grunt) {
- 
+
   //Checks the dependencies associated with Grunt and autoloads
   //& requires ALL of them in this Gruntfile
   require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
- 
+
   // Project configuration.
   grunt.initConfig({
 
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          'css/main.css': 'css/scss/main.scss'
+          'dist/main.css': 'css/scss/main.scss'
         }
       }
     },
@@ -31,12 +31,28 @@ module.exports = function(grunt) {
     // Copy font awesome fonts into relative project
     copy: {
       font_awesome: {
-        expand: true,
-        flatten: true,
-        src: ['node_modules/font-awesome/fonts/*'],
-        dest: 'fonts'
+        files: [
+          {
+            expand: true,
+            flatten: true,
+            src: ['node_modules/font-awesome/fonts/*'],
+            dest: 'fonts'
+          }
+        ]
+      },
+      main: {
+        files: [
+          {expand: true, src: ['index.html'], dest: 'dist/'},
+          {expand: true, src: ['img/*'], dest: 'dist/'},
+          {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'dist/fonts', flatten: true}
+        ]
       }
     },
+
+
+    // clean directories
+
+    clean: ['dist'],
 
 
 
@@ -81,7 +97,7 @@ module.exports = function(grunt) {
         path: 'http://localhost:9001'
       }
     },
- 
+
 
 
 
@@ -95,14 +111,15 @@ module.exports = function(grunt) {
         'img/**/*.{png,jpg,gif,svg}'
       ],
       tasks: [
-        'copy',
+        'copy:font_awesome',
         'sass',
         'postcss'
       ]
     }
- 
+
   });
- 
+
   //grunt serve
   grunt.registerTask('default', ['connect', 'open', 'watch']);
+  grunt.registerTask('build', ['clean', 'sass', 'copy:main']);
 };
