@@ -30,6 +30,7 @@
     "grunt-sass": "^1.0.0"
   },
   "scripts": {
-    "start": "grunt build && node server.js"
+    "postinstall": "grunt build",
+    "start": "node server.js"
   }
 }
