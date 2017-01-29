@@ -20,5 +20,8 @@
     "grunt-open": "^0.2.3",
     "grunt-postcss": "^0.5.4",
     "grunt-sass": "^1.0.0"
+  },
+  "scripts": {
+    "start": "grunt build && node server.js"
   }
 }
