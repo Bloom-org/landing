@@ -17,113 +17,6 @@ body {
   align-items: center;
 }
 
-header {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-
-  .link {
-  	outline: none;
-  	text-decoration: none;
-  	position: relative;
-  	font-size: 8em;
-  	line-height: 1;
-  	color: #9e9ba4;
-  	display: inline-block;
-  }
-
-  .link--title {
-  	font-weight: 800;
-  	color: rgba(255, 255, 255, 0.85);
-  	font-family: 'Kaushan Script', sans-serif;
-  	-webkit-transition: color 0.5s 0.25s;
-  	transition: color 0.5s 0.25s;
-  	overflow: hidden;
-    width: 350px;
-  }
-
-  .link--title:hover {
-  	-webkit-transition: none;
-  	transition: none;
-  	color: transparent;
-  }
-
-  .link--title::before {
-  	content: '';
-  	width: 100%;
-  	height: 6px;
-  	margin: -3px 0 0 0;
-  	// background: #DF317F;
-  	background: #E9C16A;
-  	position: absolute;
-  	left: 0;
-  	top: 50%;
-  	-webkit-transform: translate3d(-100%,0,0);
-  	transform: translate3d(-100%,0,0);
-  	-webkit-transition: -webkit-transform 0.4s;
-  	transition: transform 0.4s;
-  	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-  	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-  }
-
-  .link--title:hover::before {
-  	-webkit-transform: translate3d(100%,0,0);
-  	transform: translate3d(100%,0,0);
-  }
-
-  .link--title span {
-  	position: absolute;
-  	height: 50%;
-  	width: 100%;
-  	left: 0;
-  	top: 0;
-  	overflow: hidden;
-  }
-
-  .link--title span::before {
-  	content: attr(data-letters);
-  	color: red;
-  	position: absolute;
-  	left: 0;
-  	width: 100%;
-  	color: white;
-    opacity: 0.9;
-  	-webkit-transition: -webkit-transform 0.5s;
-  	transition: transform 0.5s;
-    -webkit-stroke-width: 5.3px;
-    -webkit-stroke-color: #FFFFFF;
-    -webkit-fill-color: #FFFFFF;
-    text-shadow: 7px 0px 2px #76BA6B;
-  }
-
-  .link--title span:nth-child(2) {
-  	top: 50%;
-  }
-
-  .link--title span:first-child::before {
-  	top: 0;
-  	-webkit-transform: translate3d(0,100%,0);
-  	transform: translate3d(0,100%,0);
-  }
-
-  .link--title span:nth-child(2)::before {
-  	bottom: 0;
-  	-webkit-transform: translate3d(0,-100%,0);
-  	transform: translate3d(0,-100%,0);
-  }
-
-  .link--title:hover span::before {
-  	-webkit-transition-delay: 0.3s;
-  	transition-delay: 0.3s;
-  	-webkit-transform: translate3d(0,0,0);
-  	transform: translate3d(0,0,0);
-  	-webkit-transition-timing-function: cubic-bezier(0.2,1,0.3,1);
-  	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
-  }
-}
-
 .intro {
   color: $white;
   display: flex;
@@ -132,20 +25,42 @@ header {
   align-items: center;
   text-align: center;
   border: 3px solid #ffffff;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 2rem;
   margin-top: 45px;
+  position: relative;
 
   h1 {
     border-bottom: 2px solid #ffffff;
   }
 
-  span {
-    font: {
-      font-family: 'Nunito', sans-serif;
-      size: 2em;
+  .icons-wrapper {
+    .top-left, .top-right, .bottom-right, .bottom-left {
+      position: absolute;
+    }
+    .top-left {
+      top: 20px;
+      left: 20px;
+      transform: rotate(-45deg)
+    }
+
+    .top-right {
+      top: 20px;
+      right: 20px;
+    }
+
+    .bottom-right {
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .bottom-left {
+      bottom: 20px;
+      left: 20px;
     }
   }
+
+  
 
   .separator {
     height: 2px;
@@ -160,9 +75,9 @@ header {
       size: 1rem;
       weight: 400;
     }
-    span {
-      font-size: 1.2rem;
-    }
+    // span {
+    //   font-size: 1.2rem;
+    // }
   }
 
   // p:last-of-type {
@@ -178,7 +93,7 @@ footer {
   display: flex;
   justify-content: center;
   img {
-    height: 60px;
+    height: 40px;
   }
 }
 
@@ -186,7 +101,7 @@ footer {
   margin-top:2em;
   width: 100%;
   @media(min-width:600px) {
-   max-width: 1000px;
+   max-width: 750px;
   }
   form {
     display: flex;
@@ -195,7 +110,7 @@ footer {
   input {
     font-family: 'Quicksand', sans-serif;
     // width: 100%;
-    font-size: 100%;
+    font-size: 90%;
     border: 0 none;
     border-radius:0;
     text-align: center;
@@ -205,7 +120,7 @@ footer {
     border: solid 2px #333;
   }
   .btn {
-    background:#8E7E6b;
+    background:#B5AB9D;
     color: #000;
     font-weight:bold;
     cursor:pointer;
