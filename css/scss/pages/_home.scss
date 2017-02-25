@@ -8,13 +8,24 @@ body, html {
 }
 
 body {
-  background-image: url('/img/landing-bg.jpg');
+  background-image: linear-gradient(rgba(48, 67, 82, 0.1), rgba(215, 210, 204, 0.15)),url('/img/landing-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+
+main {
+  padding-left: 100px;
+}
+
+h1 {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  width: 54%;
 }
 
 .intro {
@@ -22,17 +33,13 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   text-align: center;
-  border: 3px solid #ffffff;
-  background-color: rgba(0, 0, 0, 0.8);
-  padding: 2rem;
+  // border: 1px solid #ffffff;
+  // background-color: rgba(0, 0, 0, 0.25);
+  padding: 1rem 0;
   margin-top: 45px;
   position: relative;
-
-  h1 {
-    border-bottom: 2px solid #ffffff;
-  }
 
   .icons-wrapper {
     .top-left, .top-right, .bottom-right, .bottom-left {
@@ -69,10 +76,10 @@ body {
   }
 
   p {
-    margin: 1rem 0;
+    margin: 0.6rem 0;
     font: {
       family: 'Nunito', sans-serif;
-      size: 1rem;
+      size: 0.95rem;
       weight: 400;
     }
     // span {
@@ -87,6 +94,8 @@ body {
 
 footer {
   margin-top: 45px;
+  width: 50%;
+  padding-left: 100px;
 }
 
 .icons-wrapper {
@@ -105,7 +114,7 @@ footer {
   }
   form {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
   }
   input {
     font-family: 'Quicksand', sans-serif;
@@ -114,23 +123,27 @@ footer {
     border: 0 none;
     border-radius:0;
     text-align: center;
-    margin: 0 0.5rem 1rem 0.5rem;
+    margin: 0 0.5rem 1rem 0rem;
   }
   input[type="text"] {
     border: solid 2px #333;
   }
   .btn {
-    background:#B5AB9D;
-    color: #000;
-    font-weight:bold;
-    cursor:pointer;
-    transition: all 0.3s ease;
-    appearance:none;
-    -webkit-appearance:none;
-    -moz-appearance:none;
+    background: #FBBC30;
+    color: #3c3c3c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 140px;
+
     &:hover,
     &:focus {
-      background: #EDC06A;
+      background: #ffb716;
+      color: rgba(255, 255, 255, 1);
+      border: 1px solid #3e3a33;
     }
     &:focus {
       outline: 0 none;
