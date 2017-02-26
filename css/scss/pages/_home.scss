@@ -31,8 +31,6 @@ main {
 }
 
 h1 {
-  // border-bottom: 2px solid #ffffff;
-  // color: #ffffff;
   color: #ecd49d;
   text-shadow: 0 2px 2px #000;
   text-align:center;
@@ -99,16 +97,13 @@ h1 {
       weight: 400;
     }
     text-align: center;
-    // max-width:80%;
     max-width: 250px;
     @media (min-width:$bp-xs) {
-      // max-width: 300px;
       max-width:70%;
     }
     @media (min-width:$bp-sm) {
       text-align: left;
       max-width:350px;
-      // max-width:84%;
     }
     @media (min-width:$bp-md) {
       max-width: 100%;
@@ -151,7 +146,6 @@ footer {
   }
   input {
     font-family: 'Quicksand', sans-serif;
-    // width: 100%;
     font-size: 90%;
     border: 0 none;
     border-radius:0;
@@ -164,8 +158,6 @@ footer {
     }
   }
   .btn {
-    // background: #FBBC30;
-    // color: #222;
     background: #519764;
     color: #FFF;
     font-weight: normal;
@@ -183,7 +175,6 @@ footer {
 
     &:hover,
     &:focus {
-      // background: #ffb716;
       background: #5cb675;
       color: rgba(255, 255, 255, 1);
     }
@@ -222,15 +213,16 @@ footer {
   div.mce_inline_error {
     font-size:80% !important;
     background: #2e2d33 !important;
-    padding: 0.5em 0.3em !important;
+    padding: 0.5em 10px !important;
     margin-bottom: 0 !important;
-    margin-right: 0.5rem !important;
+    @media (min-width:$bp-sm) {
+      margin-right: 0.5rem !important;
+    }
   }
 
 }
 
 .share-notice {
-  // color: #9c7e49;
   color: #7d7d7d;
   background: #2e2d33;
   font-family: 'Nunito', sans-serif;
@@ -238,10 +230,12 @@ footer {
   padding: 0.5em 10px;
   line-height: 1;
   text-align:center;
-  max-width:250px;
+  width: 100%;
+  max-width:230px;
   margin: 0 auto;
   @media (min-width:$bp-sm) {
-    width:250px;
+    width:300px;
+    max-width:300px;
     margin: 0;
     text-align:left;
     margin-right: 0.5rem;
