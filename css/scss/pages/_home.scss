@@ -46,6 +46,7 @@ main {
     @media(min-height:430px) {
       // failsafe to prevent overlapping content on small heighted screens
       display: flex;
+      padding-top: 50px;
     }
     @media (min-width:$bp-sm) {
       justify-content: center;
