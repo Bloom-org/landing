@@ -1,6 +1,7 @@
 $bp-xs: 500px;
 $bp-sm: 600px;
 $bp-md: 768px;
+$bp-lg: 1000px;
 
 body, html {
   height: 100%;
@@ -36,8 +37,8 @@ body, html {
 main {
   width: 100%;
   height: 100%;
-  @media (min-width:$bp-md) {
-    padding-left: 100px;
+  @media (min-width:$bp-lg) {
+    margin-left:-100px;
   }
   > .container {
     height: 100%;
