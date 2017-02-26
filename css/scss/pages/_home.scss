@@ -16,6 +16,7 @@ body, html {
   overflow-y: scroll;
 
   height:100%;
+  background-image: url('/img/landing-bg.jpg');
   background-image: linear-gradient(rgba(48, 67, 82, 0.1), rgba(215, 210, 204, 0.15)),url('/img/landing-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -120,7 +121,10 @@ h1 {
       weight: 400;
     }
     text-align: center;
-    max-width: 250px;
+    max-width: 100%;
+    @media (min-width:270px) {
+      max-width: 250px;
+    }
     @media (min-width:$bp-xs) {
       max-width:70%;
     }
@@ -130,6 +134,11 @@ h1 {
     }
     @media (min-width:$bp-md) {
       max-width: 100%;
+    }
+    // icon color failsafe for IE.
+    .icon {
+      color: #519764;
+      font-size:1.5em;
     }
   }
 
