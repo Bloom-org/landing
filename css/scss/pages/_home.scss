@@ -16,6 +16,8 @@ body, html {
   overflow-y: scroll;
 
   height:100%;
+  background:#1A1A1A;
+  background: linear-gradient(#2A2f3E,#000);
   background-image: url('/img/landing-bg.jpg');
   background-image: linear-gradient(rgba(48, 67, 82, 0.1), rgba(215, 210, 204, 0.15)),url('/img/landing-bg.jpg');
   background-size: cover;
@@ -219,6 +221,18 @@ footer {
     font-weight:normal !important;
     margin-bottom:0.5em !important;
     font-family: 'Nunito', sans-serif;
+    max-width: 448px !important;
+    @media (min-width:$bp-sm) {
+      margin-top: 0.5rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .response {
+      padding: 0.5em 10px !important;
+    }
+    a {
+      color: #FFF !important;
+      display:inline-block !important;
+    }
   }
 
   div#mce-success-response,
@@ -227,6 +241,7 @@ footer {
     font-family: 'Nunito', sans-serif;
     font-weight:normal !important;
     text-align:center !important;
+    color: #ecd49d !important;
     @media (min-width:$bp-sm) {
       text-align:left !important;
     }
@@ -242,14 +257,17 @@ footer {
     color:#e83232 !important;
   }
 
+  div#mce-responses,
   div.mce_inline_error {
     font-size:80% !important;
     background: #2e2d33 !important;
-    padding: 0.5em 10px !important;
     margin-bottom: 0 !important;
     @media (min-width:$bp-sm) {
       margin-right: 0.5rem !important;
     }
+  }
+  div.mce_inline_error {
+    padding: 0.5em 10px !important;
   }
 
 }
