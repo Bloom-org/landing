@@ -11,6 +11,7 @@ body {
   background-image: linear-gradient(rgba(48, 67, 82, 0.1), rgba(215, 210, 204, 0.15)),url('/img/landing-bg.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 100% 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,12 +21,15 @@ body {
 
 main {
   padding-left: 100px;
+  margin-top: -6rem;
 }
 
 h1 {
-  border-bottom: 2px solid #ffffff;
-  color: #ffffff;
+  // border-bottom: 2px solid #ffffff;
+  // color: #ffffff;
+  color: #ecd49d;
   width: 54%;
+  text-shadow: 0 2px 2px #000;
 }
 
 .intro {
@@ -38,7 +42,7 @@ h1 {
   // border: 1px solid #ffffff;
   // background-color: rgba(0, 0, 0, 0.25);
   padding: 1rem 0;
-  margin-top: 45px;
+  // margin-top: 45px;
   position: relative;
 
   .icons-wrapper {
@@ -77,9 +81,10 @@ h1 {
 
   p {
     margin: 0.6rem 0;
+    text-shadow: 0 2px 2px #000;
     font: {
       family: 'Nunito', sans-serif;
-      size: 0.95rem;
+      size: 1rem;
       weight: 400;
     }
     // span {
@@ -95,19 +100,19 @@ h1 {
 footer {
   margin-top: 45px;
   width: 50%;
-  padding-left: 100px;
+  padding-left: 140px;
+  color: #FFF;
 }
 
 .icons-wrapper {
   display: flex;
-  justify-content: center;
   img {
     height: 32px;
   }
 }
 
 .signup-form {
-  margin-top:2em;
+  margin-top:1em;
   width: 100%;
   @media(min-width:600px) {
    max-width: 750px;
@@ -115,6 +120,7 @@ footer {
   form {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 0;
   }
   input {
     font-family: 'Quicksand', sans-serif;
@@ -122,28 +128,30 @@ footer {
     font-size: 90%;
     border: 0 none;
     border-radius:0;
-    text-align: center;
-    margin: 0 0.5rem 1rem 0rem;
+    margin: 0 0.5rem 0 0rem;
   }
   input[type="text"] {
     border: solid 2px #333;
   }
   .btn {
-    background: #FBBC30;
-    color: #3c3c3c;
-    font-weight: bold;
+    // background: #FBBC30;
+    // color: #222;
+    background: #519764;
+    color: #FFF;
+    font-weight: normal;
     cursor: pointer;
     transition: all 0.1s ease;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 140px;
+    margin-bottom: 0;
 
     &:hover,
     &:focus {
-      background: #ffb716;
+      // background: #ffb716;
+      background: #5cb675;
       color: rgba(255, 255, 255, 1);
-      border: 1px solid #3e3a33;
     }
     &:focus {
       outline: 0 none;
@@ -151,14 +159,15 @@ footer {
   }
 
   div#mce-responses {
-    font-family: 'Quicksand', sans-serif;
     font-weight:normal !important;
     margin-bottom:0.5em !important;
+    font-family: 'Nunito', sans-serif;
   }
 
   div#mce-success-response,
   div#mce-error-response,
   div.mce_inline_error {
+    font-family: 'Nunito', sans-serif;
     font-weight:normal !important;
   }
 
@@ -169,14 +178,27 @@ footer {
 
   div#mce-error-response,
   div.mce_inline_error {
-    color:#c62a6a !important;
+    color:#e83232 !important;
   }
 
   div.mce_inline_error {
     font-size:80% !important;
-    background: none !important;
-    margin-top: -1em !important;
-    padding:0 !important;
+    background: #2e2d33 !important;
+    padding: 0.5em 0.3em !important;
+    margin-bottom: 0 !important;
+    margin-right: 0.5rem !important;
   }
 
+}
+
+.share-notice {
+  // color: #9c7e49;
+  color: #7d7d7d;
+  background: #2e2d33;
+  font-family: 'Nunito', sans-serif;
+  width:300px;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  padding: 0.5em 0.3em;
+  line-height: 1;
 }
