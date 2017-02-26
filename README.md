@@ -1,4 +1,4 @@
-# Bloom landing page
+# Plantstove landing page
 
 Built from : https://github.com/leemunroe/motherplate
 
