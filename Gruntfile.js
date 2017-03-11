@@ -28,23 +28,23 @@ module.exports = function(grunt) {
 
 
 
-    // Copy font awesome fonts into relative project
+    // Copy files into relative path
     copy: {
-      font_awesome: {
-        files: [
-          {
-            expand: true,
-            flatten: true,
-            src: ['node_modules/font-awesome/fonts/*'],
-            dest: 'fonts'
-          }
-        ]
-      },
+      // font_awesome: {
+      //   files: [
+      //     {
+      //       expand: true,
+      //       flatten: true,
+      //       src: ['node_modules/font-awesome/fonts/*'],
+      //       dest: 'fonts'
+      //     }
+      //   ]
+      // },
       main: {
         files: [
           {expand: true, src: ['index.html'], dest: 'dist/'},
           {expand: true, src: ['img/*'], dest: 'dist/'},
-          {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'dist/fonts', flatten: true}
+          // {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'dist/fonts', flatten: true}
         ]
       }
     },
@@ -53,9 +53,6 @@ module.exports = function(grunt) {
     // clean directories
 
     clean: ['dist'],
-
-
-
 
 
     // Use PostCSS Autoprefixer to apply browser prefixes for certain styles
