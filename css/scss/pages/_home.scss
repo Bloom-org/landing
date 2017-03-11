@@ -59,6 +59,7 @@ h1 {
   text-shadow: 0 2px 2px #000;
   text-align:center;
   font-size:4.5em;
+  font-family: 'Ruluko';
   @media (min-width:$bp-xs) {
     font-size:5em;
   }
@@ -120,7 +121,7 @@ h1 {
     margin: 0.6rem 0;
     text-shadow: 0 2px 2px #000;
     font: {
-      family: 'Nunito', sans-serif;
+      family: 'Ruluko', sans-serif;
       size: 1rem;
       weight: 400;
     }
@@ -134,15 +135,21 @@ h1 {
     }
     @media (min-width:$bp-sm) {
       text-align: left;
-      max-width:350px;
-    }
-    @media (min-width:$bp-md) {
       max-width: 100%;
+      &:first-child {
+        margin-bottom: 0;
+      }
     }
     // icon color failsafe for IE.
     .icon {
       color: #519764;
       font-size:1.5em;
+      @media (min-width:$bp-sm) {
+        display: none;
+      }
+      @media (min-width:$bp-sm + 20px) {
+        display: inline-block;
+      }
     }
   }
 
@@ -181,8 +188,7 @@ footer {
     }
   }
   input {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 90%;
+    font-family: 'Ruluko', sans-serif;
     border: 0 none;
     border-radius:0;
     margin: 0;
@@ -222,7 +228,7 @@ footer {
   div#mce-responses {
     font-weight:normal !important;
     margin-bottom:0.5em !important;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Ruluko', sans-serif;
     max-width: 448px !important;
     @media (min-width:$bp-sm) {
       margin-top: 0.5rem !important;
@@ -240,7 +246,7 @@ footer {
   div#mce-success-response,
   div#mce-error-response,
   div.mce_inline_error {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Ruluko', sans-serif;
     font-weight:normal !important;
     text-align:center !important;
     color: #ecd49d !important;
@@ -277,7 +283,7 @@ footer {
 .share-notice {
   color: #7d7d7d;
   background: #2e2d33;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Ruluko', sans-serif;
   font-size: 0.9rem;
   padding: 0.5em 10px;
   line-height: 1;
