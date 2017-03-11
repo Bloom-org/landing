@@ -17,6 +17,8 @@ app.use(express.static(__dirname));
 
 app.use(morgan('dev'));
 
+app.use(express.static(__dirname + '/dist')); //set the static files location
+
 require('./client.app.routes')(app); // pass our application into our routes
 
 app.listen(port);

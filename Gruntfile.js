@@ -43,7 +43,8 @@ module.exports = function(grunt) {
       main: {
         files: [
           {expand: true, src: ['index.html'], dest: 'dist/'},
-          {expand: true, src: ['img/*'], dest: 'dist/'},
+          {expand: true, src: ['img/favicons/*'], dest: 'dist/', flatten: true },
+          {expand: false, src: ['img/*'], dest: 'dist/'}
           // {expand: true, src: ['node_modules/font-awesome/fonts/*'], dest: 'dist/fonts', flatten: true}
         ]
       }
