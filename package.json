@@ -22,7 +22,7 @@
     "grunt-sass": "^1.0.0"
   },
   "engines": {
-    "node": "5.1.0"
+    "node": "8.1.4"
   },
   "scripts": {
     "start": "node server.js"
